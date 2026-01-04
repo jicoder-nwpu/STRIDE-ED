@@ -1,0 +1,22 @@
+[
+  { "gold": "listener: How are you today ?" },
+  { "gold": "listener: That sounds great ." },
+  { "gold": "listener: What time did you arrive ?" },
+  { "gold": "listener: Glad you made it safely ." },
+  { "gold": "listener: Did you see anything interesting ?" },
+  { "gold": "listener: I agree , the view is amazing ." },
+  { "gold": "listener: Have you had dinner yet ?" },
+  { "gold": "listener: Let’s grab a bite together ." },
+  { "gold": "listener: Which movie do you want to watch ?" },
+  { "gold": "listener: Comedy sounds perfect ." },
+  { "gold": "listener: When should we leave ?" },
+  { "gold": "listener: I’ll be ready at eight ." },
+  { "gold": "listener: Where shall we meet ?" },
+  { "gold": "listener: See you at the gate ." },
+  { "gold": "listener: Did you finish the report ?" },
+  { "gold": "listener: Thanks for your hard work ." },
+  { "gold": "listener: Are you coming to the party ?" },
+  { "gold": "listener: I’ll save you a slice of cake ." },
+  { "gold": "listener: How was your weekend ?" },
+  { "gold": "Sounds like you had fun ." }
+]
