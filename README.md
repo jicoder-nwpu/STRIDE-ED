@@ -1,5 +1,5 @@
 # STRIDE-ED: A Strategy-Grounded Stepwise Reasoning Framework for Empathetic Dialogue Systems
-Pytorch implementation for the paper:[STRIDE-ED: A Strategy-Grounded Stepwise Reasoning Framework for Empathetic Dialogue Systems]
+Data and Code Repository for “STRIDE-ED: A Strategy-Grounded Stepwise Reasoning Framework for Empathetic Dialogue Systems”
 
 ## Directory Structure
 
