@@ -1,0 +1,7 @@
+numpy==1.26.4
+nltk==3.9.1
+sacrebleu==2.5.1
+six==1.17.0
+more_itertools==10.8.0
+torch==2.6.0
+transformers==4.53.2
