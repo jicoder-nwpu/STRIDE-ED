@@ -19,6 +19,7 @@ Data and Code Repository for “STRIDE-ED: A Strategy-Grounded Stepwise Reasonin
 ├── evaluate/                  # Evaluation scripts directory
 │   ├── evaluator_bleu_dist_rouge.py  # BLEU, DIST, ROUGE evaluator
 │   ├── evaluator_ppl.py              # Perplexity evaluator
+│   ├── extra_info.py                  # evaluate file
 │   └── test.json                      # Test results file
 │
 ├── requirements.txt          # Dependency Management File
