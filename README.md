@@ -21,6 +21,7 @@ Pytorch implementation for the paper:[STRIDE-ED: A Strategy-Grounded Stepwise Re
 │   ├── evaluator_ppl.py              # Perplexity evaluator
 │   └── test.json                      # Test results file
 │
+├── requirements.txt          # Dependency Management File
 ├── sft_train.sh              # SFT training script
 ├── ppo_train.sh              # PPO training script
 ├── genarate.sh               # Model generation script
