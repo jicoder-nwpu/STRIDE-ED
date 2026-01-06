@@ -32,16 +32,13 @@ if __name__ == "__main__":
             )
 
     train_dataset = dataset["train"]
-    # test_dataset = dataset["test"]
-
-    # add a row to each data item that represents a unique id
+    
     def make_map_fn(split):
         def process_fn(example, idx):
             conversations = example.pop("conversations")
             answer_raw = example.pop("answer")
             solution = extract_answer(answer_raw)
             emotion = example.pop("emotion")
-            # strategy = example.pop("strategy_sub")
 
             thinking = example.pop("thinking")
             thinking = thinking.split("<Strategy>")[0]
@@ -49,7 +46,6 @@ if __name__ == "__main__":
             data = {
                 "data_source": "csi100e",
                 "prompt": conversations,
-                # "response": answer_raw,
                 "response": '<thinking>{}</thinking><answer>{}</answer>'.format(thinking, solution),
                 "ability": "chat",
                 "reward_model": {"ground_truth": answer_raw},
@@ -57,7 +53,6 @@ if __name__ == "__main__":
                     "split": split,
                     "answer": solution,
                     "emotion": emotion, 
-                    # "strategy": strategy
                 },
             }
             return data

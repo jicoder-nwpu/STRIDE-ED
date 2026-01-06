@@ -1,11 +1,11 @@
 python ./data_process_ppo.py
 
-MODEL_PATH="./sft100-epo1-sav143-deepseek-llm-7b-ED5100fina/global_step_143/huggingface" # You can use: deepseek-ai/deepseek-llm-7b-chat
+MODEL_PATH="./sft100-epo1-sav143-deepseek-llm-7b-ED5100fina/global_step_143/huggingface"
 train_files="./train-30.parquet"
 test_files="./test_dataset.parquet"
-TP_VALUE=4 #If deepseek, set TP_VALUE=4
-INFERENCE_BATCH_SIZE=4 #If deepseek, set INFERENCE_BATCH_SIZE=16
-GPU_MEMORY_UTILIZATION=0.7 #If deepseek, set GPU_MEMORY_UTILIZATION=0.4
+TP_VALUE=4 
+INFERENCE_BATCH_SIZE=4 
+GPU_MEMORY_UTILIZATION=0.7 
 
 python3 -m verl-main.verl.trainer.main_ppo \
 	data.train_files=$train_files  \

@@ -1,7 +1,6 @@
-#!/bin/bash
+
 
 data_path=./test_dataset.jsonl
-# 定义实验名和 step 列表
 experiment_names=("sft100-epo1-sav143-deepseek-llm-7b-ED1kfina")
 steps=(143)
 
@@ -13,20 +12,20 @@ for experiment_name in "${experiment_names[@]}"; do
     local_dir=./empatheticdialogue/${experiment_name}/global_step_${step}
     model_path=${local_dir}/huggingface
 
-    # 合并模型
+    
     python3 -m verl-main.verl.model_merger merge \
         --backend fsdp \
         --local_dir $local_dir \
         --target_dir $model_path
 
-    # 删除权重文件
+   
     
     rm -f $local_dir/*.pt
 
     set -x
     SECONDS=0d
 
-    # 推理生成
+    
     python3 -m verl.trainer.main_generation \
         trainer.nnodes=1 \
         trainer.n_gpus_per_node=4 \
@@ -48,7 +47,7 @@ for experiment_name in "${experiment_names[@]}"; do
 
     echo "耗时：$SECONDS 秒"
 
-    # 转换为 jsonl
+
     target_path=./test_dataset_generate-${experiment_name}-${step}.jsonl
     python ./parquet2jsonl.py --input $save_path --output $target_path
     python ./extra_info.py --input $target_path --ex_name ${experiment_name}-${step}

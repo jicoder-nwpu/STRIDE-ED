@@ -1,7 +1,7 @@
 python ./data_process_train.py
 # python ./data_process_ppo.py
 
-# set -x
+
 
 torchrun --standalone --nnodes=1 --nproc_per_node=4 \
     -m verl-main.verl.trainer.fsdp_sft_trainer \
@@ -20,10 +20,6 @@ torchrun --standalone --nnodes=1 --nproc_per_node=4 \
     trainer.nnodes=1 \
     trainer.save_freq=143 \
     trainer.logger='["console","swanlab"]' \
-    # model.lora_rank=32 \
-    # model.lora_alpha=64 \
-    # model.target_modules=all-linear
-    # model.strategy=fsdp \
 
 chmod +x ./genarate.sh
 ./genarate.sh
