@@ -168,9 +168,6 @@ def get_evaluate(path, ex_name):
         response = response.split('<answer>')[-1]
         response = response.replace("listener:", '')
         response = response.strip()
-        if not response.endswith('?') and not response.endswith('!'):
-            if not response.endswith('.'):
-                response += '.'
         grundtruths.append(response)
         exm['truth_response'] = response
         exm['truth_thinking'] = thinking
@@ -184,9 +181,6 @@ def get_evaluate(path, ex_name):
             response = re.sub(r'\(.*?\)', '', response).strip()
             response = response.replace("listener:", '')
             response = response.strip()
-            if not response.endswith('?') and not response.endswith('!'):
-                if not response.endswith('.'):
-                    response += '.'
         except Exception as e:
             response = ''
             thinking = ''
