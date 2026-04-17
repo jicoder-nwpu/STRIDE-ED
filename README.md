@@ -143,9 +143,11 @@ The project supports the following evaluation metrics:
 
 If you use STRIDE-ED in your research, please cite our paper:
 
+```bib
 @inproceedings{ji2026strideedstrategygroundedstepwisereasoning,
       title={STRIDE-ED: A Strategy-Grounded Stepwise Reasoning Framework for Empathetic Dialogue Systems}, 
       author={Hongru Ji and Yuyin Fan and Meng Zhao and Xianghua Li and Lianwei Wu and Chao Gao},
       booktitle={Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)},
       year={2026}
 }
+```
